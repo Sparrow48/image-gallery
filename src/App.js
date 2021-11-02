@@ -8,23 +8,22 @@ function App() {
 
   useEffect(async () => {
     try {
-      console.log(process.env);
       const response = await fetch(
         `${ApiUrl}/?key=${apiKey}&q=yellow+flowers&image_type=photo&pretty=true`
       );
       const data = await response.json();
-      console.log(data);
+      setImages(data.hits);
     } catch (err) {
       console.error(err);
     }
   }, []);
 
   return (
-    <div className="container mx-auto">
-      <div className="grid grid-cols-3 gap-4">
-        {/* {images.map((image) => {
-          <ImageCard key={image.id} image={image} />;
-        })} */}
+    <div className="container-2xl px-2 bg-gray-200">
+      <div className="grid grid-cols-4 gap-10">
+        {images.map((image) => (
+          <ImageCard key={image.id} image={image} />
+        ))}
       </div>
     </div>
   );

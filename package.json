@@ -13,8 +13,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "dev": "env-cmd -f .env node test.js",
-    "start": "npm run dev && npm run watch:css && react-scripts start",
+    "start": "env-cmd -f ./.env npm run watch:css && react-scripts start",
     "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

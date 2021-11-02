@@ -2,7 +2,7 @@ import React from "react";
 
 function ImageCard({ image }) {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg ">
+    <div className="max-w-sm rounded overflow-hidden shadow-lg mt-2">
       <img src={image.webformatURL} alt="random" className="w-full" />
       <div className="px-6 py-4">
         <div className="font-bold text-purple-500 text-xl md-2">
