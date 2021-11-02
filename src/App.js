@@ -19,7 +19,7 @@ function App() {
   }, []);
 
   return (
-    <div className="container-2xl px-2 bg-gray-200">
+    <div className="container-2xl px-2 ">
       <div className="grid grid-cols-4 gap-10">
         {images.map((image) => (
           <ImageCard key={image.id} image={image} />
